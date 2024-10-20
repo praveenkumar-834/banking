@@ -13,7 +13,7 @@ resource "aws_instance" "test-server" {
      }
   provisioner "remote-exec" {
      inline = ["echo 'wait to start the instance' "]
-     "sleep 30"
+     
   }
   tags = {
      Name = "test-server"
