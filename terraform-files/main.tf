@@ -4,6 +4,7 @@ resource "aws_instance" "test-server" {
   subnet_id     = "subnet-06898d64c28fad325"
   vpc_security_group_ids = ["sg-0523c2537441a2132"]
   key_name = "mykey"
+  map_public_ip_on_launch = true
   
   connection {
      type = "ssh"
