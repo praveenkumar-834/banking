@@ -4,13 +4,13 @@
   connection : ssh
   tasks : 
   - name: updating apt
-    command : sudo yum update
+    command : sudo apt-get update
 
   - name : Install Docker
-    command : sudo yum install docker -y
+    command : sudo apt-get install docker -y
 
   - name : Start Docker Service
-    command : sudo systemctl start docker
+    command : sudo service docker start
 
   - name: Deploy Docker Container
     command: docker run -itd -p 8084:8081 0834/banking-project-demo:3.0
